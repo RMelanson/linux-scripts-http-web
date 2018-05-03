@@ -1,6 +1,8 @@
 #!/bin/bash
-
-#------------------- INITIAL INSTALL --------------------
-yum install httpd -y
-echo "Server Available" > /var/www/html/index.html
-service httpd start
+currDir=$PWD
+devToolsDir=/tmp/scripts/apps/WEB
+git clone https://github.com/RMelanson/linux-scripts-devtools.git $devToolsDir
+cd $devToolsDir
+chmod 744 setup.sh
+./setup.sh
+cd $currDir
