@@ -1,6 +1,4 @@
-# Package linux-scripts-apps-web
-![Bootstrap Image](https://github.com/RMelanson/linux-scripts-bootstraps/blob/master/images/boot1.jpg)
-
+# Package linux-scripts-apps-web<img src="https://github.com/RMelanson/linux-scripts-bootstraps/blob/master/images/boot1.jpg" width="6%" align= "right">
 ### Table of Contents
 You're sections headers will be used to reference location of destination.
 
