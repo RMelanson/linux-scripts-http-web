@@ -1,4 +1,4 @@
-# Package Linux-scripts-bootstraps
+# Package linux-scripts-apps-web
 ![Bootstrap Image](https://github.com/RMelanson/linux-scripts-bootstraps/blob/master/images/boot1.jpg)
 
 ### Table of Contents
