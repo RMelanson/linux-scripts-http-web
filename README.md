@@ -42,7 +42,7 @@ You're sections headers will be used to reference location of destination.
 ### Contents <img src="https://github.com/RMelanson/linux-scripts-bootstraps/blob/master/images/contents.png" width="6%" align= "right">
 
 - README.md ~ Readme file
-- xxxxxBootstrap.sh  ~ Installs the package
+- webBootstrap.sh  ~ Installs the package
 - setup.sh - is the master setup file for package installation and may be run directly as root ./setup.sh
        - or as user with sudo access sudo ./setupBootstrap.sh
 -
