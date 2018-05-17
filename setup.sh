@@ -1,4 +1,6 @@
-#!/bin/bash
+#! /bin/bash
+# Setup the required environment
+. .env/setEnv.sh#
 
 #------------------- INITIAL INSTALL --------------------
 yum install httpd -y
