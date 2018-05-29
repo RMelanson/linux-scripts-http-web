@@ -12,6 +12,12 @@ else
   branch=$1
 fi
 
+#INITIAL BASIC TOOLS INSTALL
+yum update -y
+
+#INSTALL GIT
+yum install git -y
+
 #Set Cloning Properties
 pkg=Web
 gitRepo="linux-scripts-apps-web.git"
