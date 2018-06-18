@@ -12,20 +12,14 @@ yum update -y
 #INSTALL GIT
 yum install git -y
 
-if [ -z "$1" ]; then
-   branch=master
-else
-  branch=$1
-fi
-
 #Set Cloning Properties
 pkg=Web
 gitRepo="linux-scripts-apps-web.git"
 installDir="/tmp/scripts/apps/WEB"
 if [ -f ~/.ssh/gitHub.key ]; then
-   clone="git clone -b $branch git@github.com:RMelanson/"
+   clone="git clone -git@github.com:RMelanson/"
 else
-   clone="git clone -b $branch https://github.com/RMelanson/"
+   clone="git clone https://github.com/RMelanson/"
 fi
 
 # Clone $pkg
@@ -34,6 +28,11 @@ $clone$gitRepo $installDir
 
 # Setup $pkg
 cd $installDir
-. ./setup.sh
+
+# MAKE ALL SHELL SCRIPTS EXECUTABLE TO ROOT ONLY
+find . -name "*.sh" -exec chmod 700 {} \;
+
+# Setup Project
+./setup
 
 cd $webCurrDir
