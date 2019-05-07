@@ -1,9 +1,20 @@
 #!/bin/bash
-webCurrDir=$PWD
+bootstrapDir=$PWD
+bootstrap=$webCurrDir/webBootstrap.sh
 
+# Ensure script is running under root
 if [ "$EUID" -ne 0 ]
-  then echo "Please run as root or under sudo"
-  exit -1
+then
+   sudo -n true 2/dev/null 2>&1
+   passwordRequired=$?
+
+   if [ "$passwordRequired" == "1" ]; then
+       echo "Please run as root or under user with sudo access sudo"
+   else
+       sudo chmod +x $bootstrap
+       sudo $bootstrap
+   fi
+   return 1
 fi
 
 #INITIAL BASIC TOOLS INSTALL
@@ -36,4 +47,4 @@ find . -name "*.sh" -exec chmod 700 {} \;
 # Setup Project
 ./setup.sh 2>&1| tee setup.log
 
-cd $webCurrDir
+cd $bootstrapDir
